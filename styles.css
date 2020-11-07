@@ -240,3 +240,32 @@ td>span {
 #date-comitions {
   background-color: var(--soft-blue);
 }
+
+.main__benefits {
+  background-color: var(--warm-black);
+}
+
+.main__benefits > span {
+  height: 24px;
+  width: 40px;
+  display: inline-block;
+
+  position: relative;
+  margin: 0 auto;
+
+  background-image: url(./assets/img/logo-s.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main__benefits > h2 {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  color: var(--just-white);
+
+  padding: 40px 15px 25px 15px;
+}
