@@ -29,6 +29,7 @@
 html {
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -75,7 +76,7 @@ header img {
   font-weight: 500;
 }
 
-.header__title-container .header__buttom {
+.header__buttom {
   position: absolute;
   left: calc(50% - 120px);
   top: 270px;
@@ -109,6 +110,24 @@ main {
   background-color: var(--off-white);
 }
 
+.exchange__table {
+  display: flex;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.exchange__table-item {
+  scroll-snap-align: center;
+  padding: 0 16px;
+  margin: 25px 30px 10px 30px;
+}
+
+.exchange__table-item:first-child {
+  margin-left: 70px;
+}
+
 .main__exchange {
   width: 100%;
   height: auto;
@@ -121,7 +140,6 @@ main {
 .main__exchange__text {
   width: 90%;
   min-width: 288px;
-  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -250,7 +268,7 @@ td>span {
   height: 90rem;
 }
 
-.main__benefits > span {
+.main__benefits>span {
   height: 24px;
   width: 40px;
   display: inline-block;
@@ -265,7 +283,7 @@ td>span {
   background-size: cover;
 }
 
-.main__benefits > h2 {
+.main__benefits>h2 {
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
@@ -276,7 +294,7 @@ td>span {
   padding: 40px 15px 25px 15px;
 }
 
-.main__benefits > p {
+.main__benefits>p {
   margin-bottom: 3rem;
   color: var(--little-gray);
   font-weight: 500;
@@ -285,7 +303,7 @@ td>span {
   text-align: center;
 }
 
-.main__benefits > article {
+.main__benefits>div>article {
   background-color: var(--warm-black-2);
   margin: 16px;
   border-radius: 4px;
@@ -298,14 +316,14 @@ td>span {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
 }
 
-.main__benefits > article > h3 {
+.main__benefits>div>article>h3 {
   font-weight: 700;
   font-size: 1.8rem;
   color: var(--just-white);
   margin: 10px 0 10px 0;
 }
 
-.main__benefits > article > span {
+.main__benefits>div>article>span {
   width: 2.4rem;
   height: 2.4rem;
   display: inline-block;
@@ -332,16 +350,16 @@ td>span {
 }
 
 .main__img {
- background-image: url(./assets/img/bitcoinbaby.png);
- background-size: cover;
- background-repeat: no-repeat;
- background-position: center;
+  background-image: url(./assets/img/bitcoinbaby.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
- height: 50vh;
- text-align: center;
+  height: 50vh;
+  text-align: center;
 }
 
-.main__img > h2 {
+.main__img>h2 {
   padding-top: 60px;
   font-size: 2.4rem;
   font-weight: bold;
@@ -353,8 +371,9 @@ td>span {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 64px 0;
+  padding: 64px 0;
   text-align: center;
+  background-color: #f8f0f3;
 }
 
 .main__plans-introduction {
@@ -363,7 +382,7 @@ td>span {
   min-height: 52px;
 }
 
-.main__plans-introduction > h2 {
+.main__plans-introduction>h2 {
   color: var(--warm-black);
   font-style: normal;
   font-size: 2.4rem;
@@ -371,20 +390,35 @@ td>span {
   margin-bottom: 24px;
 }
 
-.main__plans-introduction > p {
+.main__plans-introduction>p {
   color: var(--good-gray);
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 18px;
 }
 
+.main__plans-slider {
+  display: flex;
+  justify-content: space-between;
+  height: 316px;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
 .main__plans-plan {
+  scroll-snap-align: center;
   background-color: var(--just-white);
   box-shadow: 0px 4px 8px 0px #59491E 16%;
   height: 247px;
   width: 190px;
   border-radius: 8px;
   padding: 0 16px;
+  margin: 25px 30px 10px 30px;
+}
+
+.main__plans-plan:first-child {
+  margin-left: 70px;
 }
 
 .plan-top {
@@ -392,20 +426,19 @@ td>span {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--bitcoin-orange);
 
   height: 31px;
   width: 101px;
   border-radius: 8px;
   padding: 8px;
 
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
   line-height: 15px;
   color: #FFFFFF;
 }
 
-.plan-cost > p {
+.plan-cost>p {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 18px;
@@ -417,7 +450,7 @@ td>span {
   height: auto;
 }
 
-.plan-cost__price > span {
+.plan-cost__price>span {
   position: relative;
   top: 14px;
 
@@ -425,12 +458,12 @@ td>span {
   font-weight: 500;
 }
 
-.plan-cost__price > h3 {
+.plan-cost__price>h3 {
   font-size: 5.2rem;
   font-weight: 700;
 }
 
-.plan-cost > article {
+.plan-cost>article {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 14.52px;
@@ -442,7 +475,6 @@ td>span {
   height: 48px;
   width: 151px;
   border-radius: 4px;
-  border-color: var(--bitcoin-orange);
   padding: 12px, 16px;
   background-color: var(--off-white);
   color: black;
@@ -456,9 +488,69 @@ td>span {
   padding: 12px 16px;
 }
 
-.plan-buy > span {
+.plan-buy>span {
   width: 24px;
   height: 24px;
   display: inline-block;
-  background-image: url(./assets/icon/arrow-right.svg);
+}
+
+#anual>.plan-top {
+  background-color: var(--bitcoin-orange);
+}
+
+#anual>.plan-buy {
+  border-color: var(--bitcoin-orange);
+}
+
+#anual>.plan-buy>span {
+  background-image: url(./assets/icon/arrow-right-orange.svg);
+}
+
+#mensual>.plan-top {
+  background-color: var(--secondary-blue);
+}
+
+#mensual>.plan-buy {
+  border-color: var(--secondary-blue);
+}
+
+#mensual>.plan-buy>span {
+  background-image: url(./assets/icon/arrow-right-blue.svg);
+}
+
+#empresas>.plan-top {
+  background-color: var(--good-gray);
+}
+
+#empresas>.plan-buy {
+  border-color: var(--good-gray);
+}
+
+#empresas>.plan-buy>span {
+  background-image: url(./assets/icon/arrow-right-gray.svg);
+}
+
+footer {
+  background-color: var(--bitcoin-orange);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+}
+
+footer>nav>a {
+  display: block;
+  text-decoration: none;
+  color: var(--just-white);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--soft-orange);
 }

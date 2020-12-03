@@ -1,0 +1,136 @@
+@media (min-width: 650px) {
+    header {
+      height: 250px;
+    }
+  
+    .header__buttom {
+      top: 190px;
+    }
+  }
+
+  @media (min-width: 650px) {
+    .main__exchange {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    .main__exchange__text {
+      order: -3;
+      width: 100%;
+    }
+  
+    .exchange__table {
+      justify-content: space-evenly;
+      width: 500px;
+      overflow-x: unset;
+      overscroll-behavior-x: unset;
+      scroll-snap-type: unset;
+      overflow-x: hidden;
+    }
+  
+    .exchange__table-item {
+      scroll-snap-align: unset;
+      padding: 0 16px;
+      margin: 25px 30px 10px 30px;
+    }
+  
+    .exchange__table-item:first-child {
+      margin-left: 0px;
+    }
+  }
+  
+  @media (min-width: 900px) {
+    .exchange__table {
+      margin-right: 4.5%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main__exchange {
+      flex-wrap: no-wrap;
+    }
+  
+    .main__exchange__text {
+      order: 3;
+      width: 10%;
+      text-align: left;
+    }
+  
+    .exchange__table {
+      justify-content: space-evenly;
+      width: 500px;
+      overflow-x: unset;
+      overscroll-behavior-x: unset;
+      scroll-snap-type: unset;
+      overflow-x: hidden;
+    }
+  
+    .exchange__table-item {
+      scroll-snap-align: unset;
+      padding: 0 16px;
+      margin: 25px 30px 10px 30px;
+    }
+  
+    .exchange__table-item:first-child {
+      margin-left: 0px;
+    }
+  }
+
+  @media (min-width: 650px) {
+    .main__benefits>div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .main__benefits>div>article {
+      width: 45%;
+    }
+  
+    .main__benefits {
+      height: auto;
+      padding-bottom: 30px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    .main__benefits>div {
+      justify-content: space-around;
+    }
+  
+    .main__benefits>div>article {
+      width: 20%;
+      height: auto;
+    }
+  
+  }
+
+  @media (min-width: 650px) {
+    .main__plans-slider {
+      overflow-x: unset;
+      overscroll-behavior-x: unset;
+      scroll-snap-type: x unset;
+  
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+      height: unset;
+    }
+  
+    .main__plans-plan:first-child {
+      margin-left: 0;
+    }
+  
+    .main__plans-plan {
+      scroll-snap-align: unset;
+      margin: 0;
+    }
+  
+    .main__plans-plan-last {
+      margin: 0;
+    }
+  
+    #empresas {
+      margin: 0;
+    }
+  }
